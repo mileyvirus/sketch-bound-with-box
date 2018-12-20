@@ -123,12 +123,8 @@ var onRun = function(context) {
 			posY = posY - (paddingHeight / 2);
 		}
 
-		// Create rectangle
-		var rect   = MSRectangleShape.alloc().init();
-		rect.frame = MSRect.rectWithRect(NSMakeRect(posX, posY, width, height));
-
 		// Add default styling
-		var shapeGroup = MSShapeGroup.shapeWithPath(rect);
+		var shapeGroup = MSShapeGroup.shapeWithRect(NSMakeRect(posX, posY, width, height));
 		shapeGroup.style().addStylePartOfType(0);
 
 		// Add to the container
